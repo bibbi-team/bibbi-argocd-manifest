@@ -1,0 +1,1 @@
+## Bibbi ArgoCD Manifest
