@@ -7,7 +7,7 @@ spec:
     - websecure
   routes:
     - kind: Rule
-      match: Host(`testapi.no5ing.kr`)
+      match: Host(`api.no5ing.kr`)
       priority: 10
       services:
         - name: bibbi-backend-api
