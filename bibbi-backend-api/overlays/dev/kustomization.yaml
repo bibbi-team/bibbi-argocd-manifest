@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- namespace.yaml
+- ../../base
+- ingressroute.yaml
+transformers:
+- |-
+  apiVersion: builtin
+  kind: NamespaceTransformer
+  metadata:
+    name: notImportantHere
+    namespace: bibbi-dev
+  unsetOnly: true
+images:
+- name: no5ing/bibbi-backend-api
+  newName: no5ing/bibbi-backend-api-dev
+  newTag: "1"

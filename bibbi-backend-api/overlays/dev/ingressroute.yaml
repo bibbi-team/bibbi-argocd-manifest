@@ -1,0 +1,17 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: bibbi-backend-api-igr
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`dev.api.no5ing.kr`)
+      priority: 10
+      services:
+        - name: bibbi-backend-api
+          port: 8080
+  tls:
+    secretName: no5ing.kr
+    certResolver: letsencrypt
