@@ -14,5 +14,5 @@ transformers:
   unsetOnly: true
 images:
 - name: no5ing/bibbi-backend-api
-  newName: bibbi-backend-api-dev
-  newTag: d4a1225
+  newName: no5ing/bibbi-backend-api-dev
+  newTag: b99d278
