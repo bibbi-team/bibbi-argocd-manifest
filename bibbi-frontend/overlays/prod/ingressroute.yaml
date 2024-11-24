@@ -12,6 +12,12 @@ spec:
       services:
         - name: bibbi-frontend
           port: 3000
+    - kind: Rule
+      match: Host(`link.no5ing.kr`)
+      priority: 20
+      services:
+        - name: bibbi-frontend
+          port: 3000
   tls:
     secretName: no5ing.kr
     certResolver: letsencrypt
@@ -27,6 +33,12 @@ spec:
     - kind: Rule
       match: Host(`bibbi.app`)
       priority: 10
+      services:
+        - name: bibbi-frontend
+          port: 3000
+    - kind: Rule
+      match: Host(`link.bibbi.app`)
+      priority: 20
       services:
         - name: bibbi-frontend
           port: 3000
