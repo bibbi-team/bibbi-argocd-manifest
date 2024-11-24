@@ -1,0 +1,35 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: bibbi-backend-api-igr-legacy
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`no5ing.kr`)
+      priority: 10
+      services:
+        - name: bibbi-frontend
+          port: 3000
+  tls:
+    secretName: no5ing.kr
+    certResolver: letsencrypt
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: bibbi-backend-api-igr-new
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`bibbi.app`)
+      priority: 10
+      services:
+        - name: bibbi-frontend
+          port: 3000
+  tls:
+    secretName: bibbi.app
+    certResolver: letsencrypt
