@@ -4,6 +4,7 @@ resources:
 - namespace.yaml
 - ../../base
 - ingressroute.yaml
+- deployment.yaml
 transformers:
 - |-
   apiVersion: builtin

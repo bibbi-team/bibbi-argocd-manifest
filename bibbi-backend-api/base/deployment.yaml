@@ -3,13 +3,18 @@ kind: Deployment
 metadata:
   name: bibbi-backend-api
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: bibbi-backend-api
   template:
     metadata:
+      annotations:
+        admission.datadoghq.com/java-lib.version: v1.44.1
       labels:
+        tags.datadoghq.com/env: "development"
+        tags.datadoghq.com/service: "bibbi-backend-api"
+        tags.datadoghq.com/version: "1.0"
         app: bibbi-backend-api
     spec:
       containers:
