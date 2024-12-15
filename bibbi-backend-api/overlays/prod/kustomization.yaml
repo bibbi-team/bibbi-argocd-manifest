@@ -4,7 +4,6 @@ resources:
 - namespace.yaml
 - ../../base
 - ingressroute.yaml
-- deployment.yaml
 transformers:
 - |-
   apiVersion: builtin
@@ -17,3 +16,7 @@ images:
 - name: no5ing/bibbi-backend-api
   newName: no5ing/bibbi-backend-api
   newTag: e097272
+patches:
+- path: deployment.yaml
+  target:
+    kind: Deployment
