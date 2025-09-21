@@ -14,4 +14,4 @@ transformers:
 images:
 - name: no5ing/bibbi-frontend
   newName: no5ing/bibbi-frontend
-  newTag: '250616'
+  newTag: d1d6150
