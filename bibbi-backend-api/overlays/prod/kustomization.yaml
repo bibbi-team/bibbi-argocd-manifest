@@ -15,7 +15,7 @@ transformers:
 images:
 - name: no5ing/bibbi-backend-api
   newName: no5ing/bibbi-backend-api
-  newTag: 1e4399c
+  newTag: 12c6a66
 patches:
 - path: deployment.yaml
   target:
