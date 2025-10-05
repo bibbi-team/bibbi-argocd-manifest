@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: bibbi.app
+  namespace: bibbi-prod
+spec:
+  dnsNames:
+    - 'bibbi.app'
+    - '*.bibbi.app'
+  secretName: bibbi.app
+  issuerRef:
+    name: cloudflare-issuer
+    kind: ClusterIssuer

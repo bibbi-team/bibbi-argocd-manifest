@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: no5ing.kr
+  namespace: bibbi-prod
+spec:
+  dnsNames:
+    - 'no5ing.kr'
+    - '*.no5ing.kr'
+  secretName: no5ing.kr
+  issuerRef:
+    name: cloudflare-issuer
+    kind: ClusterIssuer

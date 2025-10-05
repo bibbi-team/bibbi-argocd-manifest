@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
 - ../../base
 - ingressroute.yaml
+- certificate.yaml
 transformers:
 - |-
   apiVersion: builtin
