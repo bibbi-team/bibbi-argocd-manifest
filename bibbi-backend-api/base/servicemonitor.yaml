@@ -3,6 +3,7 @@ kind: ServiceMonitor
 metadata:
   name: bibbi-backend-api-sm
   labels:
+    release: kube-prometheus-stack
     app.kubernetes.io/part-of: bibbi-backend-api
 spec:
   selector:
