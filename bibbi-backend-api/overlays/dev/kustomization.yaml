@@ -16,4 +16,4 @@ transformers:
 images:
 - name: no5ing/bibbi-backend-api
   newName: no5ing/bibbi-backend-api-dev
-  newTag: fea1ae1
+  newTag: 77aef5d
